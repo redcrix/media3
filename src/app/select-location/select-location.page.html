@@ -1,0 +1,64 @@
+<ion-content class="ion-content">
+
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-icon name="arrow-back" class="top_icon"></ion-icon>
+      </ion-buttons>
+      <ion-title>Hour4u</ion-title>
+      <ion-buttons slot="end" id="notify-btn">
+        <img src="../../assets/notification_outline.svg" class="notify_img">
+        <ion-badge id="n-badge">2</ion-badge>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="half_bg">
+
+  <p class="personal-info-text">Where you live ?</p>
+
+  <div class="gray-bg">
+
+  <div class="info-card">
+    <div>
+      <div class="input-label">
+        <ion-label> <p class="l_text">Address</p></ion-label>
+        <p class="get_address" style="font-weight: bold;">Noida, Sector 16</p>
+      </div>
+
+      <div class="search_">
+      
+        <ion-input type="text" placeholder="Search"  #name class="basic-info-text" style="padding-left: 8px;" >
+          <ion-icon name="search" slot="start" class="search_icon"></ion-icon>
+        </ion-input>
+      </div>
+
+
+        <div id="map" #map style="height: 100%;width:100%"></div>
+
+
+      <p class="allow_access">
+        <ion-checkbox color="primary" mode="md"></ion-checkbox>
+        I allow hour4u to access my location
+      </p>
+
+
+      <ion-row>
+        <ion-col style="text-align:center;">
+          <button class="save-btn" (click)="SaveAndContinue()">
+            Save and Continue
+          </button>
+        </ion-col>
+      </ion-row>
+
+
+  
+
+
+    </div>
+  </div>
+
+</div>
+
+</div>
+

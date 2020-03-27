@@ -1,0 +1,101 @@
+<ion-content>
+  <div class="map-holder">
+    <div class="img-holder" id="img1">
+      <ion-avatar>
+        <img src="assets/imgs/ww.jpg" />
+      </ion-avatar>
+    </div>
+    <div class="img-holder" id="img2">
+      <ion-avatar>
+        <img src="assets/imgs/ww.jpg" />
+      </ion-avatar>
+    </div>
+    <div class="img-holder" id="img3">
+      <ion-avatar>
+        <img src="assets/imgs/ww.jpg" />
+      </ion-avatar>
+    </div>
+    <div class="img-holder" id="img4">
+      <ion-avatar>
+        <img src="assets/imgs/ww.jpg" />
+      </ion-avatar>
+    </div>
+  </div>
+  <div class="slider-holder ion-text-center">
+    <ion-slides #slides pager="false" scrollbar="false" (ionSlideDidChange)="onSlideChange()" [options]="slideOpts">
+      <ion-slide>
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="12">
+              <h1>Join the Camps</h1>
+              <p class="ion-text-wrap">Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s when
+                an unknown printer took a
+                galley</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide>
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="12">
+              <h1>Work like them</h1>
+              <p class="ion-text-wrap">Text ever since the 1500s when an unknown printer took a galley Lorem Ipsum has
+                been the industry’s standard dummy</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide>
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="12">
+              <h1>Get Nearby Jobs</h1>
+              <p class="ion-text-wrap">Since the 1500s when an unknown printer took a galley Lorem Ipsum has been the
+                industry’s standard dummy text ever</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+      <ion-slide>
+        <ion-grid fixed>
+          <ion-row>
+            <ion-col size="12">
+              <h1>Get Faster Payments</h1>
+              <p class="ion-text-wrap">When an unknown printer took a galley Lorem Ipsum has been the industry’s
+                standard dummy text ever since the 1500s </p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="btn-holder ion-padding">
+    <ion-button expand="block" shape="round" routerLink="/phoneinput">
+      GET STARTED
+    </ion-button>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border" mode="md" translucent>
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="!showTextBtn">
+      <ion-button (click)="slideBack()">
+        <ion-icon slot="start" name="arrow-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <div class="custom-pagination">
+      <div *ngFor="let bullet of numberss; let i = index" class="pagination-bullet"
+        [ngClass]="{'pagination-bullet-active': activeIndex === i}"></div>
+    </div>
+    <ion-buttons slot="end"  *ngIf="!showTextBtn">
+      <ion-button (click)="slideNext()">
+        <ion-icon slot="start" name="arrow-forward"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end" (click)=" goPhoneInput()" *ngIf="showTextBtn">
+      <ion-button>
+       {{btnText}}
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1057720385634",
+    "firebase_url": "https://hour4u-uat.firebaseio.com",
+    "project_id": "hour4u-uat",
+    "storage_bucket": "hour4u-uat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057720385634:android:d607c790fe55613226113b",
+        "android_client_info": {
+          "package_name": "com.codemiro.hour4u"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1057720385634-0i3e7fdd7l4knt9khgelgbtcpu0tiblb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCLjo5oORkMLHgvNwwKaOO56gCniYPtQW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1057720385634-0i3e7fdd7l4knt9khgelgbtcpu0tiblb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

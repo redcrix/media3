@@ -1,0 +1,56 @@
+#stages:
+#  - build
+#  - package
+#  - deploy
+#
+#build:
+#  stage: build
+#  image: node:alpine
+#  script:
+#    - yarn install
+#    - yarn build
+#  cache:
+#    key: ${CI_JOB_NAME}
+#    paths:
+#      - node_modules/
+#  artifacts:
+#    untracked: true
+#    paths:
+#      - www/
+#
+#package-android:
+#  image: beevelop/cordova:latest
+#  stage: package
+#  dependencies:
+#    - build
+#  script:
+#    - chmod +x update-version.sh
+#    - "[[ -z $CI_COMMIT_TAG ]] || ./update-version.sh $CI_COMMIT_TAG"
+#    - mkdir $ANDROID_HOME/licenses
+#    - echo '<result from cat>' > $ANDROID_HOME/licenses/android-sdk-license
+#    - cordova platform add android
+#    - echo n | cordova build android --release
+#    - cp platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk app-release-unsigned.apk
+#  cache:
+#    key: ${CI_JOB_NAME}
+#    paths:
+#      - node_modules/
+#      - platforms/
+#      - plugins/
+#  artifacts:
+#    paths:
+#      - app-release-unsigned.apk
+#
+#deploy-android:
+#  image: tygrinn/android-deploy:latest
+#  stage: deploy
+#  dependencies:
+#    - package-android
+#  only:
+#    - tags
+#  script:
+#    - jarsigner -sigalg SHA1withRSA -digestalg SHA1 -keystore ./fastlane/<app-name>.keystore app-release-unsigned.apk <alias-name> -storepass $KEYSTORE_PASS
+#    - zipalign -v 4 app-release-unsigned.apk app-release.apk
+#    - fastlane supply --apk app-release.apk --track beta --package_name com.example.myapp
+#    paths:
+#      - app-release.apk

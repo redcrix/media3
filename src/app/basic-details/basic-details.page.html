@@ -1,0 +1,78 @@
+<ion-content class="ion-content">
+
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-icon name="arrow-back" class="top_icon"></ion-icon>
+      </ion-buttons>
+      <ion-title>Hour4u</ion-title>
+      <ion-buttons slot="end" id="notify-btn">
+        <img src="../../assets/notification_outline.svg" class="notify_img">
+        <ion-badge id="n-badge">2</ion-badge>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="half_bg">
+
+  <p class="personal-info-text">Personal Information</p>
+
+  <div class="gray-bg">
+
+  <div class="info-card">
+    <div>
+      <div class="input-label">
+        <ion-label> <p class="l_text">Name</p></ion-label>
+        <ion-input type="text"  #name class="basic-info-text" style="    margin-bottom: -10px; font-weight: bold;" ></ion-input>
+      </div>
+      <div class="input-label">
+        <ion-label> <p class="l_text">Gender</p></ion-label>
+        <ion-radio-group  [(ngModel)]="gender">
+          <ion-row class="g-row">
+            <ion-col class="g-col" style="    margin-bottom: -10px;">
+                    <span class="radio-btn_">
+                      <ion-radio  color="primary" mode="md" item-right value="male"></ion-radio>
+                    </span>
+                    <span class="g_lbl">Male</span>
+                    <span class="radio-btn_">
+                      <ion-radio  color="primary" mode="md" item-right value="female"></ion-radio>
+                      </span>
+                    <span class="g_lbl">Female</span>
+             </ion-col> 
+        </ion-row>
+        </ion-radio-group>
+      </div>
+      <div class="input-label">
+        <ion-label> <p class="l_text">Date of Birth</p></ion-label>
+
+        <ion-datetime display-format="DD MMM YYYY"></ion-datetime>
+        <ion-icon name="calendar-outline" slot="end" class="calender_icon"></ion-icon>
+
+      </div>
+      <div class="input-label">
+        <ion-label> <p class="l_text">Phone</p></ion-label>
+        <ion-input type="tel" [attr.maxlength]="12"  #name [ngModel]="tel_no" class="basic-info-text" (ngModelChange)="mychange($event)" style="    margin-bottom: -10px; font-weight: bold;" ></ion-input>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+
+
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="save-and-continue-bg">
+
+    <ion-row>
+      <ion-col style="text-align:center;">
+        <button class="save-btn" (click)="SaveAndContinue()">
+          Save and Continue
+        </button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-toolbar>
+</ion-footer>

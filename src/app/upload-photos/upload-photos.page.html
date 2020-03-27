@@ -1,0 +1,75 @@
+<ion-content class="ion-content">
+
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-icon name="arrow-back" class="top_icon"></ion-icon>
+      </ion-buttons>
+      <ion-title>Hour4u</ion-title>
+      <ion-buttons slot="end" id="notify-btn">
+        <img src="../../assets/notification_outline.svg" class="notify_img">
+        <ion-badge id="n-badge">2</ion-badge>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="half_bg">
+
+  <p class="personal-info-text">Profile Picture:</p>
+
+  <div class="gray-bg">
+
+  <div class="info-card">
+
+      <div class="camera-label">
+        <div class="camera_outine">
+          <img src="../../assets/camera_outline.svg" class="icon_camera">
+        </div>
+        <p class="tap_">Tap to Upload Your Photo</p>
+      </div>
+
+
+</div>
+
+<div class="other_board">
+  <p class="other-photos-text">Other Photos: <span class="text_light">(Max 4)</span></p>
+
+  <ion-row class="pics-upload">
+    <ion-col class="col-upload-pic">
+      <ion-icon name="add-outline" color="primary"></ion-icon>
+    </ion-col>
+    <ion-col class="col-upload-pic">
+      <ion-icon name="add-outline" color="primary"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="pics-upload">
+    <ion-col class="col-upload-pic">
+      <ion-icon name="add-outline" color="primary"></ion-icon>
+    </ion-col>
+    <ion-col class="col-upload-pic">
+      <ion-icon name="add-outline" color="primary"></ion-icon>
+    </ion-col>
+  </ion-row>
+
+</div>
+
+
+</div>
+</div>
+
+
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="save-and-continue-bg">
+
+    <ion-row>
+      <ion-col style="text-align:center;">
+        <button class="save-btn" (click)="SaveAndContinue()">
+          Save and Continue
+        </button>
+      </ion-col>
+    </ion-row>
+    
+  </ion-toolbar>
+</ion-footer>

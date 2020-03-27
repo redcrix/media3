@@ -1,0 +1,194 @@
+ion-content
+{
+
+    ion-title.md.title-default.hydrated {
+        text-align: center;
+        font-size: 24px;
+        color: black;
+    }
+
+    ion-title.ios.title-default.hydrated {
+        text-align: center;
+        font-size: 24px;
+        color: black;
+    }
+
+    img.notify_img {
+        height: 27px;
+    }
+
+
+    --background: #EFEFEF;
+
+    .half_bg {
+        background: #49E5D6;
+        margin-top: -32px;
+        height: 250px;
+    }
+
+    p.personal-info-text {
+        padding-top: 36px;
+        padding-left: 20px;
+        font-weight: bold;
+        font-family: inherit;
+    }
+
+    .header_ {
+        display: inline-flex;
+    }
+
+
+    .title
+    {
+        h2{
+            font-weight: bold !important;
+        }
+    }
+
+    .input-label {
+        border-bottom: 2px solid #d3d3d345;
+        width: 94%;
+        padding-bottom: 9px;
+        padding-top: 13px;
+    }
+
+    .scroll-content {
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        z-index: 1;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+        will-change: scroll-position;
+        contain: size style layout;
+        display: flex;             // added by me
+        flex-direction: column;    // added by me
+    }
+    .info-card
+    {
+            background: white;
+            border-top-left-radius: 27px;
+            border-top-right-radius: 95px;
+            padding-top: 15px;
+            padding-left: 22px;
+            margin-top: 22%;
+            -webkit-box-shadow: 8px 7px 9px 0px rgba(232,232,232,1);
+            -moz-box-shadow: 8px 7px 9px 0px rgba(232,232,232,1);
+            box-shadow: 1px 7px 9px 0px #e8e8e8;
+            border-bottom-right-radius: 27px;
+            border-bottom-left-radius: 27px;   
+            padding-bottom: 35px;        
+
+    }
+    input.native-input.sc-ion-input-ios {
+        font-weight: bold !important;
+    }
+    input.native-input.sc-ion-input-md {
+        font-weight: bold !important;
+    }
+    
+
+    ion-toolbar.in-toolbar.ios.toolbar-title-default.hydrated {
+        --background: #49E5D6;
+    }
+
+    ion-toolbar.in-toolbar.md.toolbar-title-default.hydrated {
+        --background: #49E5D6;
+    }
+
+   .top_icon {
+        font-size: 23px;
+        padding-right: 6px;
+        padding-top: 6px;
+        padding-left: 6px;
+    }
+    #notify-btn {
+        position: relative;
+        font-size: 23px;
+        padding-right: 9px;
+        padding-top: 6px;
+        padding-left: 6px;
+     }
+     
+     #n-badge {
+        position: absolute;
+        top: 0px;
+        right: 4px;
+        background: white;
+        color: black;
+        margin-top: 6px;
+        border-radius: 100px;
+        height: 16px;
+        padding: 7px;
+        padding-top: 2px;
+        font-size: 12px;
+        font-weight: bold;
+        width: 18px;
+        padding-left: 5px;
+     }
+
+    ion-datetime.ios.hydrated {
+        margin-left: -19px;
+        font-weight: bold;
+        margin-bottom: -10px;
+    }
+    ion-datetime.md.hydrated {
+        margin-left: -19px;
+        font-weight: bold;
+        margin-bottom: -10px;
+    }
+
+    .calender_icon{
+        float: right;
+        margin-top: -30px;
+        padding-right: 14px;
+        font-size: 24px;
+        color: #49E5D6;
+    }
+
+    ion-label.g_lbl {
+        margin-left: 7px;
+        padding-top: 3px !important;
+        margin-right: 13px;
+        font-size: 16px;
+    }
+
+
+
+
+
+
+
+   
+}
+
+
+ion-footer.ion-no-border.ios.footer-ios.hydrated {
+    background: #d3d3d33d;
+}
+
+ion-footer.ion-no-border.md.footer-md.hydrated {
+    background: #d3d3d33d;
+}
+
+.save-and-continue-bg {
+    --background: #49E5D6  !important;;
+    --border-top-right: 13px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    height: 139px;
+}
+
+.save-btn{
+    width: 75%;
+    margin-top: 36px;
+    background-color: white;
+    color: #49E5D6;
+    height: 39px;
+    font-weight: bold;
+    border-radius: 60px;
+    font-size: 15px;
+}

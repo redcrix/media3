@@ -1,0 +1,57 @@
+<ion-content class="ion-padding">
+  <div class="img-holder ion-text-left">
+    <img src="assets/imgs/icn-phone.svg" alt="">
+  </div>
+  <div class="title">
+    <h2>Mobile Verification</h2>
+    <p class="ion-text-wrap">
+      We have sent you an access code via SMS for Mobile number verifications
+    </p>
+  </div>
+
+  <div class="otp-holder">
+    <p>Enter Code here</p>
+    <div>
+      <ion-grid>
+        <ion-row align-items-center	justify-content-center	>
+          <ion-col size="2" class="ion-text-center">
+            <ion-input  type="tel"  #otp1 class="otp"  maxlength="1" (keyup)="next(otp2)">
+            </ion-input>
+          </ion-col>
+          <ion-col  size="2" class="ion-text-center">
+            <ion-input type="tel"  #otp2 class="otp" maxlength="1" size="1" (keyup)="next(otp3)">
+            </ion-input>
+          </ion-col >
+          <ion-col  size="2" class="ion-text-center">
+            <ion-input type="tel"  #otp3 class="otp" pattern="[0-9]" maxlength="1" size="1" (keyup)="next(otp4)">
+            </ion-input>
+          </ion-col>
+          <ion-col  size="2" class="ion-text-center">
+            <ion-input type="tel" #otp4 class="otp" pattern="[0-9]" maxlength="1" size="1" (keyup)="next(otp5)">
+            </ion-input>
+          </ion-col>
+          <ion-col  size="2" class="ion-text-center">
+            <ion-input type="tel" #otp5 class="otp" pattern="[0-9]" maxlength="1" size="1" (keyup)="next(otp6)">
+            </ion-input>
+          </ion-col>
+          <ion-col  size="2" class="ion-text-center">
+            <ion-input type="tel" #otp6 class="otp" pattern="[0-9]" maxlength="1" size="1" (keyup)="next(otp6)">
+            </ion-input>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="btn-holder">
+      <ion-button expand="block" shape="round" (click)="submitOTP()">
+       CONFIRM
+      </ion-button>
+    </div>
+
+    <div class="bottom-text ion-text-center">
+      <h5 class="ion-text-wrap">
+        If you didn’t receive a code ! <span>Resend</span>
+      </h5>
+    </div>
+  </div>
+</ion-content>
